@@ -1,14 +1,13 @@
 spring:
   application:
-    name: configserver
-  profiles:
-    active: composite
+    name: config-server
   cloud:
     config:
       server:
-        composite:
-          - type: native
-            search-locations: file://C:/Users/JDaniel/Documents/Universidad/config-data
-        bootstrap: true
+        git:
+          uri: file://C:/Users/JDaniel/Documents/Universidad/config-data
+  security:
+    user: admin
+    password: admin
 server:
   port: 9000
