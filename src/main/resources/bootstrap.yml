@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: file://C:/Users/JDaniel/Documents/Universidad/config-data
+        bootstrap: true
+server:
+  port: 9000
